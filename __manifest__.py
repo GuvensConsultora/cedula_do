@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "git_github.com_guvensconsultora_cedula_do.git/",
+    'name': "Cedula Rep Dominica",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        El objetivo es permitir acceder 11 caracteres y 9""",
 
     'description': """
-        Long description of module's purpose
+        Heredo el modulo base_vat y genero la validación de 11 caracteres para la cedula y 9 para Nfc
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
+    'author': "Güvens and Slyn",
+    'website': "https://github.com/GuvensConsultora/cedula_do/edit/main/",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -20,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','base_vat'],
 
     # always loaded
     'data': [
