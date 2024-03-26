@@ -1,18 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# from odoo import models, fields, api
+from odoo import models, api
+from odoo.exceptions import ValidationError
 
+class ResPartner(models.Model):
+    _inherit = 'res.partner'
 
-# class git_github.com_guvensconsultora_cedula_do.git/(models.Model):
-#     _name = 'git_github.com_guvensconsultora_cedula_do.git/.git_github.com_guvensconsultora_cedula_do.git/'
-#     _description = 'git_github.com_guvensconsultora_cedula_do.git/.git_github.com_guvensconsultora_cedula_do.git/'
-
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
+    @api.constrains('vat', 'country_id')
+    def check_vat_do(self):
+        for record in self:
+            if record.country_id.code == 'DO' and record.vat:
+                if len(record.vat) not in [9, 11]:
+                    raise ValidationError("El número de cédula dominicano no es válido. Debe tener 9 o 11 dígitos.")
