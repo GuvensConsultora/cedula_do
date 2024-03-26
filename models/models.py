@@ -5,8 +5,9 @@ from odoo.exceptions import ValidationError
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    @api.constrains('vat')
+    @api.constrains(self, vat)
     def check_vat_do(self):
         for record in self:
             if record.vat and len(record.vat) not in [9, 11]:
                 raise ValidationError("El número de cédula no es válido. Debe tener 9 o 11 dígitos.")
+            return True
