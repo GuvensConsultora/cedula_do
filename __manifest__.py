@@ -3,7 +3,7 @@
     'name': "Cedula Rep Dominica",
 
     'summary': """
-        El objetivo es permitir acceder 11 caracteres y 9""",
+        El objetivo es permitir acceder 11 caracteres y 9 para la identificación impositiva""",
 
     'description': """
         Heredo el modulo base_vat y genero la validación de 11 caracteres para la cedula y 9 para Nfc
