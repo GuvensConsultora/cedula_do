@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_git_github.com_guvensconsultora_cedula_do.git/_git_github.com_guvensconsultora_cedula_do.git/,git_github.com_guvensconsultora_cedula_do.git/.git_github.com_guvensconsultora_cedula_do.git/,model_git_github.com_guvensconsultora_cedula_do.git/_git_github.com_guvensconsultora_cedula_do.git/,base.group_user,1,1,1,1
